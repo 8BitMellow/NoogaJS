@@ -1,0 +1,39 @@
+h1 {
+	font-family: 'chatype_bold_italicBdIt';
+	font-size: 44pt;
+}
+
+h2 {
+	font-family: 'chatype_medium_italicMdIt';
+	font-size: 32pt;
+}
+
+h3 {
+	font-family: 'chatype_medium_italicMdIt';
+	font-size: 24pt;	
+}
+
+h4 {
+	font-family: 'chatype_medium_italicMdIt';
+	font-size: 18pt;	
+}
+
+
+p {
+	font-family: 'chatype_medium_italicMdIt';
+	font-size: 14pt;
+}
+
+a {
+	font-family: 'chatype_medium_italicMdIt';
+	font-size: 14pt;	
+}
+
+li {
+    font-family: 'chatype_medium_italicMdIt';
+	font-size: 14pt;	
+}
+span {
+    font-family: 'chatype_medium_italicMdIt';
+	font-size: 14pt;	
+}

@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 				dest: 'dist/js/app.js'
 			},
 			vendorjs: {
-				src: ['dev/vendor/js/jquery.min.js', 'dev/vendor/js/underscore.min.js', 'dev/vendor/js/bootstrap.min.js', 'dev/vendor/js/angular.min.js'],
+				src: ['dev/vendor/js/jquery.min.js', 'dev/vendor/js/underscore.min.js', 'dev/vendor/js/bootstrap.min.js', 'dev/vendor/js/angular.min.js', 'dev/vendor/js/**/*.js'],
 				dest: 'dist/js/vendor.min.js'
 			},
 			sourcecss: {
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 				dest: 'dist/css/app.css'
 			},			
 			vendorcss: {
-				src: ['dev/vendor/css/bootstrap.min.css', 'dev/vendor/css/bootstrap-responsive.min.css'],
+				src: ['dev/vendor/css/bootstrap.min.css', 'dev/vendor/css/bootstrap-responsive.min.css','dev/vendor/css/**/*.css'],
 				dest: 'dist/css/vendor.min.css'				
 			}
 		},
@@ -57,13 +57,16 @@ module.exports = function(grunt) {
 
 		copy: {
 			index: {
-				files: [{expand: true, cwd:'dev/source/', src: ['index.html'], dest: 'dist/'}]
+				files: [{expand: true, cwd:'dev/', src: ['index.html'], dest: 'dist/'}]
+			},
+			layout: {
+				files: [{expand: true, cwd:'dev/', src: ['layout.html'], dest: 'dist/'}]
 			},
 			images: {
-				files: [{expand: true, cwd:'dev/source/img/', src: ['**'], dest: 'dist/img/'}]
+				files: [{expand: true, cwd:'dev/source/img/', src: ['**/*'], dest: 'dist/img/'}]
 			},			
 			templates: {
-				files: [{expand: true, cwd:'dev/source/tmpl/', src: ['**'], dest: 'dist/tmpl/'}]
+				files: [{expand: true, cwd:'dev/source/tmpl/', src: ['**/*'], dest: 'dist/tmpl/'}]
 			}
 
 		},
@@ -71,34 +74,65 @@ module.exports = function(grunt) {
 		watch: {
 			index: {
 				files: ['dev/index.html'],
-				tasks: ['copy:index']
+				tasks: ['copy:index'],
+				options: {
+      				livereload: true,
+      			}
+			},
+			layout: {
+				files: ['dev/layout.html'],
+				tasks: ['copy:layout'],
+				options: {
+      				livereload: true,
+      			}
+			},
+			distindex: {
+				files: ['dist/index.html'],
+				options: {
+      				livereload: true,
+      			}				
 			},
 			images: {
-				files: ['dev/source/img/**/*'],
-				tasks: ['copy:images']
+				files: ['dev/source/img/**/*', 'dev/vendor/img/**/*' ],
+				tasks: ['copy:images'],
+				options: {
+      				livereload: true,
+      			}
 			},
 			templates: {
-				files: ['dev/source/tmpl/**/*'],
-				tasks: ['copy:templates']
+				files: ['dev/source/tmpl/**/*.html'],
+				tasks: ['copy:templates'],
+				options: {
+      				livereload: true,
+      			}				
 			},			
 			sourcejs: {
-				files: ['dev/source/js/**/*'],
-				tasks: ['concat:sourcejs']
+				files: ['dev/source/js/**/*.js'],
+				tasks: ['concat:sourcejs'],
+				options: {
+      				livereload: true,
+      			}				
 			},
 			vendorjs: {
-				files: ['dev/vendor/img/**/*'],
-				tasks: ['concat:vendorjs']
+				files: ['dev/vendor/img/**/*.js'],
+				tasks: ['concat:vendorjs'],
+				options: {
+      				livereload: true,
+      			}				
 			},
 			sourcecss: {
-				files: ['dev/source/css/**/*'],
-				tasks: ['concat:sourcecss', 'cssmin:minify']
+				files: ['dev/source/css/**/*.css'],
+				tasks: ['concat:sourcecss', 'cssmin:minify'],
+				options: {
+      				livereload: true,
+      			}				
 			},						
 			vendorcss: {
-				files: ['dev/vendor/css/**/*'],
-				tasks: ['concat:vendorcss']				
-			},
-			options: {
-					livereload: true,
+				files: ['dev/vendor/css/**/*.css'],
+				tasks: ['concat:vendorcss'],
+				options: {
+      				livereload: true,
+      			}				
 			}
 		}
 	});
