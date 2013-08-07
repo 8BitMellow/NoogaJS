@@ -1,0 +1,35 @@
+{
+  "name": "uberjuju",
+  "version": "0.0.0",
+  "description": "8-Bit Mellow Uberjuju Starter Repo and JS Developer Workflow",
+  "main": "dist/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/8BitMellow/uberjuju.git"
+  },
+  "keywords": [
+    "Uberjuju",
+    "Javascript",
+    "Grunt"
+  ],
+  "author": "Brian Hooper",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/8BitMellow/uberjuju/issues"
+  },
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-cssmin": "~0.6.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-imagemin": "~0.1.4",
+    "grunt-contrib-csslint": "~0.1.2",
+    "grunt-contrib-jshint": "~0.6.2",
+    "grunt-contrib-watch": "~0.5.1"
+  }
+}

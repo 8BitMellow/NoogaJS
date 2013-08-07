@@ -1,0 +1,9 @@
+/* LAYOUT CSS */
+
+/* overwrite bootstrap .center css class to float none */
+
+.center {
+     float: none;
+     margin-left: auto;
+     margin-right: auto;
+}
