@@ -1,15 +1,32 @@
-/* FONT COLOR */
-.white-text {
-	color: #FFFFFF;
+/* BACKGROUND COLORS */
+.bg-white {
+	background: #FFFFFF;
 }
-.black-text {
-	color: #000000;
+.bg-yellow {
+	background: #FFC000;
 }
-.yellow-text {
-	color: #FFC000;
+.bg-black {
+	background: #000000;
+}
+.bg-gray {
+	background: #A9A9A9;
 }
 
-/* FONT STYLES */
+/* FONT COLORS */
+.white {
+	color: #FFFFFF;
+}
+.black {
+	color: #000000;
+}
+.yellow {
+	color: #FFC000;
+}
+.gray {
+	color: #A9A9A9;
+}
+
+/* FONT STYLES USING CHATYPE WEBFONT */
 h1.regular {
 	font-family: 'ChatypeB2.1RegularRegular';
 	font-size: 44pt;
@@ -83,7 +100,7 @@ span.italic {
 	font-size: 14pt;	
 }
 
-/* ARTICLE */
+/* ARTICLES */
 .headline {
 	font-family: 'ChatypeB2.1RegularRegular';
 	font-size: 30pt;
@@ -102,11 +119,10 @@ span.italic {
 	font-size: 10pt;
 }
 
-/* FORM */
+/* FORMS */
 form legend {
 	font-family: 'ChatypeB2.1RegularRegular';
 }
-
 form label {
 	font-family: 'chatype_medium_italicMdIt';
 }
@@ -118,7 +134,6 @@ form textarea {
 }
 form .help-block {
 	font-family: 'ChatypeB2.1RegularRegular';
-
 }
 form button {
 	font-family: 'chatype_medium_italicMdIt';
@@ -130,22 +145,25 @@ button.btn-yellow {
 	color: #000000;
 }
 button.btn-yellow:hover {
-	background: #000000;
-	color: #FFFFFF;
+	/* hover color white */
+	background: #FFFFFF;
+	color: #000000;
 }
 button.btn-black {
 	background: #000000;
 	color: #FFFFFF;
 }
 button.btn-black:hover {
+	/* hover color yellow */
 	background: #FFC000;
 	color: #000000;
 }
-button.btn-grey {
+button.btn-gray {
 	background: #A9A9A9;
 	color: #000000;
 }
-button.btn-grey:hover {
+button.btn-gray:hover {
+	/* hover color yellow */
 	background: #FFC000;
 	color: #000000;
 }
@@ -154,6 +172,7 @@ button.btn-white {
 	color: #000000;
 }
 button.btn-white:hover {
+	/* hover color yellow */
 	background: #FFC000;
 	color: #000000;
 }
