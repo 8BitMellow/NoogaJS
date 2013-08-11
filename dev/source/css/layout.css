@@ -13,18 +13,56 @@ body {
 
 .nav {
 	background: #FFC000;
-	height: 75px;
+	height: 80px;
+	vertical-align: middle;
 }
+
  #content{
- 	padding-top: 75px;
+ 	padding-top: 80px;
  }
 
-
-.navicon {
+.logo {
+	float: center;
+	height: 64px;
+	width: 72px;
 	padding-top: 10px;
-	padding-left: 30px;
-	padding-right: 30px;
-
+	padding-bottom: 10px;
+}
+.navicon-about {
+	position: fixed;
+	margin-left: -250px;
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-top: 10px;
+	font-size: 16pt;
+	height: 44px;
+	width: 44px;
+}
+.navicon-news {
+	position: fixed;
+	margin-left: -150px;
+		padding-right: 20px;
+	padding-left: 20px;
+	padding-top: 10px;
+	font-size: 16pt;
+	height: 44px;
+	width: 44px;
+}
+.navicon-learn {
+	position: fixed;
+	margin-left: 200px;
+	padding-top: 10px;
+	font-size: 16pt;
+	height: 44px;
+	width: 44px;
+}
+.navicon-meetups {
+	position: fixed;
+	margin-left: 75px;
+	padding-top: 10px;
+	font-size: 16pt;
+	height: 44px;
+	width: 44px;
 }
 
 .center {

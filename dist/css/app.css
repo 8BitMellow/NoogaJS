@@ -13,18 +13,56 @@ body {
 
 .nav {
 	background: #FFC000;
-	height: 75px;
+	height: 80px;
+	vertical-align: middle;
 }
+
  #content{
- 	padding-top: 75px;
+ 	padding-top: 80px;
  }
 
-
-.navicon {
+.logo {
+	float: center;
+	height: 64px;
+	width: 72px;
 	padding-top: 10px;
-	padding-left: 30px;
-	padding-right: 30px;
-
+	padding-bottom: 10px;
+}
+.navicon-about {
+	position: fixed;
+	margin-left: -250px;
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-top: 10px;
+	font-size: 16pt;
+	height: 44px;
+	width: 44px;
+}
+.navicon-news {
+	position: fixed;
+	margin-left: -150px;
+		padding-right: 20px;
+	padding-left: 20px;
+	padding-top: 10px;
+	font-size: 16pt;
+	height: 44px;
+	width: 44px;
+}
+.navicon-learn {
+	position: fixed;
+	margin-left: 200px;
+	padding-top: 10px;
+	font-size: 16pt;
+	height: 44px;
+	width: 44px;
+}
+.navicon-meetups {
+	position: fixed;
+	margin-left: 75px;
+	padding-top: 10px;
+	font-size: 16pt;
+	height: 44px;
+	width: 44px;
 }
 
 .center {
@@ -47,6 +85,92 @@ body {
 }
 
 
+/* FONT COLOR */
+.white-text {
+	color: #FFFFFF;
+}
+.black-text {
+	color: #000000;
+}
+.yellow-text {
+	color: #FFC000;
+}
+
+/* FONT STYLES */
+h1.regular {
+	font-family: 'ChatypeB2.1RegularRegular';
+	font-size: 44pt;
+}
+h1.italic {
+	font-family: 'chatype_medium_italicMdIt';
+	font-size: 44pt;
+}
+h2.regular {
+	font-family: 'ChatypeB2.1RegularRegular';
+	font-size: 32pt;
+}
+h2.italic {
+	font-family: 'chatype_medium_italicMdIt';
+	font-size: 32pt;
+}
+h3.regular {
+	font-family: 'ChatypeB2.1RegularRegular';
+	font-size: 24pt;
+}
+h3.italic {
+	font-family: 'chatype_medium_italicMdIt';
+	font-size: 24pt;	
+}
+h4.regular {
+	font-family: 'ChatypeB2.1RegularRegular';
+	font-size: 18pt;
+}
+h4.italic {
+	font-family: 'chatype_medium_italicMdIt';
+	font-size: 18pt;	
+}
+p.regular {
+	font-family: 'ChatypeB2.1RegularRegular';
+	font-size: 14pt;
+}
+p.italic {
+	font-family: 'chatype_medium_italicMdIt';
+	font-size: 14pt;
+}
+.byline-regular {
+	font-family: 'ChatypeB2.1RegularRegular';
+	font-size: 10pt;
+}
+.byline-italic {
+	font-family: 'chatype_medium_italicMdIt';
+	font-size: 10pt;	
+}
+a.regular {
+	font-family: 'ChatypeB2.1RegularRegular';
+	font-size: 14pt;
+}
+a.italic {
+	font-family: 'chatype_medium_italicMdIt';
+	font-size: 14pt;	
+}
+ul.regular li {
+	font-family: 'ChatypeB2.1RegularRegular';
+	font-size: 14pt;
+}
+ul.italic li {
+    font-family: 'chatype_medium_italicMdIt';
+	font-size: 14pt;	
+}
+span.regular {
+	font-family: 'ChatypeB2.1RegularRegular';
+	font-size: 14pt;
+}
+span.italic {
+    font-family: 'chatype_medium_italicMdIt';
+	font-size: 14pt;	
+}
+
+/* ARTICLE */
 .headline {
 	font-family: 'ChatypeB2.1RegularRegular';
 	font-size: 30pt;
@@ -64,16 +188,62 @@ body {
 	font-family: 'chatype_medium_italicMdIt';
 	font-size: 10pt;
 }
-.white-text {
-	color: #FFFFFF;
-}
-.black-text {
-	color: #000000;
-}
-.yellow-text {
-	color: #FFC000;
+
+/* FORM */
+form legend {
+	font-family: 'ChatypeB2.1RegularRegular';
 }
 
+form label {
+	font-family: 'chatype_medium_italicMdIt';
+}
+form input {
+	font-family: 'chatype_medium_italicMdIt';
+}
+form textarea {
+	font-family: 'chatype_medium_italicMdIt';
+}
+form .help-block {
+	font-family: 'ChatypeB2.1RegularRegular';
+
+}
+form button {
+	font-family: 'chatype_medium_italicMdIt';
+}
+
+/* BUTTONS */
+button.btn-yellow {
+	background: #FFC000;
+	color: #000000;
+}
+button.btn-yellow:hover {
+	background: #000000;
+	color: #FFFFFF;
+}
+button.btn-black {
+	background: #000000;
+	color: #FFFFFF;
+}
+button.btn-black:hover {
+	background: #FFC000;
+	color: #000000;
+}
+button.btn-grey {
+	background: #A9A9A9;
+	color: #000000;
+}
+button.btn-grey:hover {
+	background: #FFC000;
+	color: #000000;
+}
+button.btn-white {
+	background: #FFFFFF;
+	color: #000000;
+}
+button.btn-white:hover {
+	background: #FFC000;
+	color: #000000;
+}
 h1.regular {
 	font-family: 'ChatypeB2.1RegularRegular';
 	font-size: 44pt;
