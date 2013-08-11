@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 		// CONFIGURE TASKS
 		concat: {
 			sourcejs: {
-				src: ['dev/source/js/**/*.js'],
+				src: ['dev/source/js/app.js'],
 				dest: 'dist/js/app.js'
 			},
 			vendorjs: {
@@ -107,7 +107,7 @@ module.exports = function(grunt) {
       			}				
 			},			
 			sourcejs: {
-				files: ['dev/source/js/**/*.js'],
+				files: ['dev/source/js/app.js'],
 				tasks: ['concat:sourcejs'],
 				options: {
       				livereload: true,

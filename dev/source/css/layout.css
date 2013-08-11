@@ -1,8 +1,15 @@
+.center {
+ float: none;
+ margin-left: 0px auto;
+ margin-right: 0px auto;
+}
+
 body {
-	background: #FFC000;
+	background: #FFFFFF;
 }
 
 .navbar {
+	background: #FFFFFF;
 	padding-bottom: 0px;
 	margin-bottom: 0px;
 
@@ -10,23 +17,33 @@ body {
 .navbar-inner {
   text-align:center;
 }
-
 .nav {
-	background: #FFC000;
-	height: 80px;
-	vertical-align: middle;
+	background: #FFFFFF;
+}
+.pad10 {
+	padding: 10px;
+}
+.pad20 {
+	padding: 20px;
 }
 
- #content{
+#content{
  	padding-top: 80px;
  }
-
+.brand {
+	padding: 100px;
+}
 .logo {
 	float: center;
 	height: 64px;
 	width: 72px;
 	padding-top: 10px;
 	padding-bottom: 10px;
+}
+.navicon {
+	height: 48px;
+	width: 48px;
+	padding: 10px;
 }
 .navicon-about {
 	position: fixed;
@@ -64,12 +81,3 @@ body {
 	height: 44px;
 	width: 44px;
 }
-
-.center {
- float: none;
- margin-left: 0px auto;
- margin-right: 0px auto;
-}
-
-
-
