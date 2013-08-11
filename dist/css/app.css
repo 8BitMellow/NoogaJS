@@ -46,6 +46,24 @@ body {
 	background: #A9A9A9;
 }
 
+
+.headline {
+	font-family: 'ChatypeB2.1RegularRegular';
+	font-size: 30pt;
+}
+.sub-headline {
+	font-family: 'ChatypeB2.1RegularRegular';
+	font-size: 18pt;
+	font-weight: bold;
+}
+.article {
+	font-family: 'chatype_medium_italicMdIt';
+	font-size: 14pt;
+}
+.byline {
+	font-family: 'chatype_medium_italicMdIt';
+	font-size: 10pt;
+}
 .white-text {
 	color: #FFFFFF;
 }
@@ -55,42 +73,76 @@ body {
 .yellow-text {
 	color: #FFC000;
 }
-h1 {
-	font-family: 'chatype_bold_italicBdIt';
+
+h1.regular {
+	font-family: 'ChatypeB2.1RegularRegular';
 	font-size: 44pt;
 }
-
-h2 {
+h1.italic {
+	font-family: 'chatype_medium_italicMdIt';
+	font-size: 44pt;
+}
+h2.regular {
+	font-family: 'ChatypeB2.1RegularRegular';
+	font-size: 32pt;
+}
+h2.italic {
 	font-family: 'chatype_medium_italicMdIt';
 	font-size: 32pt;
 }
-
-h3 {
+h3.regular {
+	font-family: 'ChatypeB2.1RegularRegular';
+	font-size: 24pt;
+}
+h3.italic {
 	font-family: 'chatype_medium_italicMdIt';
 	font-size: 24pt;	
 }
-
-h4 {
+h4.regular {
+	font-family: 'ChatypeB2.1RegularRegular';
+	font-size: 18pt;
+}
+h4.italic {
 	font-family: 'chatype_medium_italicMdIt';
 	font-size: 18pt;	
 }
-
-
-p {
+p.regular {
+	font-family: 'ChatypeB2.1RegularRegular';
+	font-size: 14pt;
+}
+p.italic {
 	font-family: 'chatype_medium_italicMdIt';
 	font-size: 14pt;
 }
-
-a {
+.byline-regular {
+	font-family: 'ChatypeB2.1RegularRegular';
+	font-size: 10pt;
+}
+.byline-italic {
+	font-family: 'chatype_medium_italicMdIt';
+	font-size: 10pt;	
+}
+a.regular {
+	font-family: 'ChatypeB2.1RegularRegular';
+	font-size: 14pt;
+}
+a.italic {
 	font-family: 'chatype_medium_italicMdIt';
 	font-size: 14pt;	
 }
-
-li {
+ul.regular li {
+	font-family: 'ChatypeB2.1RegularRegular';
+	font-size: 14pt;
+}
+ul.italic li {
     font-family: 'chatype_medium_italicMdIt';
 	font-size: 14pt;	
 }
-span {
+span.regular {
+	font-family: 'ChatypeB2.1RegularRegular';
+	font-size: 14pt;
+}
+span.italic {
     font-family: 'chatype_medium_italicMdIt';
 	font-size: 14pt;	
 }

@@ -1,0 +1,26 @@
+.headline {
+	font-family: 'ChatypeB2.1RegularRegular';
+	font-size: 30pt;
+}
+.sub-headline {
+	font-family: 'ChatypeB2.1RegularRegular';
+	font-size: 18pt;
+	font-weight: bold;
+}
+.article {
+	font-family: 'chatype_medium_italicMdIt';
+	font-size: 14pt;
+}
+.byline {
+	font-family: 'chatype_medium_italicMdIt';
+	font-size: 10pt;
+}
+.white-text {
+	color: #FFFFFF;
+}
+.black-text {
+	color: #000000;
+}
+.yellow-text {
+	color: #FFC000;
+}
