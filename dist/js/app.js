@@ -31,6 +31,7 @@ var noogajs = angular.module("noogajs", []).config(function($routeProvider) {
 // CONTROLLERS
 
 noogajs.controller('HomeController', function() {
+	console.log('HomeController Fired');
 
 });
 

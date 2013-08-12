@@ -66,7 +66,7 @@ module.exports = function(grunt) {
 				files: [{expand: true, cwd:'dev/source/img/', src: ['**/*'], dest: 'dist/img/'}]
 			},			
 			templates: {
-				files: [{expand: true, cwd:'dev/source/tmpl/', src: ['**/*'], dest: 'dist/tmpl/'}]
+				files: [{expand: true, cwd:'dev/source/tmpl/', src: ['**/*.html'], dest: 'dist/tmpl/'}]
 			}
 
 		},

@@ -9,7 +9,6 @@ body {
 }
 
 .navbar {
-	background: #FFFFFF;
 	padding-bottom: 0px;
 	margin-bottom: 0px;
 
@@ -18,7 +17,7 @@ body {
   text-align:center;
 }
 .nav {
-	background: #FFFFFF;
+	
 }
 .pad10 {
 	padding: 10px;
@@ -28,7 +27,7 @@ body {
 }
 
 #content{
- 	padding-top: 80px;
+ 	padding-top: 120px;
  }
 .brand {
 	padding: 100px;
