@@ -21,8 +21,12 @@ Cheers,
 <h3>Brian &amp; Andrew</h3>
 <h4>(The Starters)</h4>
 
+
+
 <h3>The <b>WHY</b></h3>
-At <a href="http://8-bit.me" target="_blank">8-Bit Mellow</a> we believe that we all...
+NoogaJS is an open source effort that is supported by the workfrolics at <a href="http://8-bit.me" target="_blank">8-Bit Mellow</a>.
+
+As we see it, we believe that we all...
 <ul>
 	<li>- possess a deeply human desire to create and to learn.</li>
 	<li>- want to be part of something bigger than ourselves.</li>
