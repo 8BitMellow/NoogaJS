@@ -1,6 +1,6 @@
-<img src="images/noogajs.png">
-
+NoogaJS
 ========
+<img src="images/noogaJS.png">
 
 <h3>What is NoogaJS?</h3>
 NoogaJS is an open source and JavaScript focused community based in Chattanooga, Tennesee. <br/><br/>
