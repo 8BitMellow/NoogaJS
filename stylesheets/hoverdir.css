@@ -1,0 +1,38 @@
+.da-thumbs {
+	list-style: none;
+	width: 984px;
+	height: 600px;
+	position: relative;
+	padding: 0;
+}
+.da-thumbs li {
+	float: left;
+	background: #fff;
+	position: relative;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.da-thumbs li a,
+.da-thumbs li a img {
+	display: block;
+	position: relative;
+}
+.da-thumbs li a {
+	overflow: hidden;
+}
+.da-thumbs li a div {
+	position: absolute;
+	background: rgba(255,192,0,0.8) url('../images/plus.png') center 100px no-repeat;
+	width: 100%;
+	height: 100%;
+}
+.da-thumbs li a div span {
+	text-align: center;
+	display: block;
+	padding: 14px 0;
+font-family:"Open_Sans_B";
+font-size: 24px;
+	margin: 30px 20px 10px 20px;
+	font-weight: normal;
+	color: #000;
+	box-shadow: 0 1px 0 #000;
+}

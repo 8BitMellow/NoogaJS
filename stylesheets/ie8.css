@@ -1,0 +1,16 @@
+.hidden-ie8{
+	display: none !important;
+	visibility: hidden !important;
+}
+#about-mid{
+	background: url('ie8-yellow-trans.png') repeat;
+}
+.element{
+	width: 230px !important;
+}
+.height-01{
+		height: 230px !important;
+	}
+	.height-02{
+		height: 285px !important;
+	}

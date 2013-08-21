@@ -1,0 +1,230 @@
+.og-grid {
+	list-style: none;
+	padding: 0px;
+	margin: 0;
+	min-width: 100%;
+	width: 100%;
+	display:block;
+}
+
+.og-grid li {
+	display: inline-block;
+	margin: 0px;
+	margin:0px;
+	padding:0px;
+	list-style: none;
+}
+
+.og-grid li > a,
+.og-grid li > a img {
+	border: none;
+	outline: none;
+	display: block;
+	position: relative;
+	
+
+}
+
+.og-grid li.og-expanded > a::after {
+	bottom: 0px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-bottom-color: #fff;
+	border-width: 15px;
+	left: 50%;
+	margin: 0px 0 0 -15px;
+	z-index:1000;
+}
+
+.og-expander {
+	position: absolute;
+	background: #fff;
+	top: auto;
+	left: 0px;
+	width: 100%;
+	margin-top: 0px;
+	text-align: left;
+	height: 100%;
+	/*overflow: hidden;*/
+	z-index:1000;
+	display:block;
+	/*border:3px solid #D35400;*/
+	color:#4b4b4b;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-shadow: inset 0 0 73px rgba(0, 0, 0, 0.15), -4px 0 4px rgba(0,0,0,0.35);
+-moz-box-shadow: inset 0 0 73px rgba(0, 0, 0, 0.15), -4px 0 4px rgba(0,0,0,0.35);
+box-shadow: inset 0 0 73px rgba(0, 0, 0, 0.15), -4px 0 4px rgba(0,0,0,0.35);
+	
+}
+
+.og-expander-inner {
+	padding: 50px 20px 20px;
+	height: 100%;
+	
+}
+
+.og-close {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 0px;
+	right: 0px;
+	cursor: pointer;
+	background: url(../img/plus.png) 40px 0px;
+	display:inline-block;
+		-webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease-in-out;
+-o-transition: all 0.3s ease-in-out;
+-ms-transition: all 0.3s ease-in-out;
+transition: all 0.3s ease-in-out;
+}
+
+.og-close:hover{
+	background: url(../img/plus.png) 40px 40px;
+}
+
+/*.og-close::before,
+.og-close::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	height: 2px;
+	background: #D35400;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.og-close::after {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.og-close:hover::before,
+.og-close:hover::after {
+	background: #333;
+}*/
+
+.og-fullimg,
+.og-details {
+	width: 46%;
+	float: left;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.og-details {
+	padding: 0 0% 0 2%;
+	margin-right:2%;
+	max-height:90%;
+	
+}
+
+.og-fullimg {
+	text-align: center;
+	float:left;
+	width:50%;
+
+}
+
+.og-fullimg img {
+	display: inline-block;
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.og-details h3 {
+	font-weight: 300;
+	font-size: 46px;
+	padding: 20px 0 10px;
+	margin-bottom: 10px;
+	line-height: 52px;
+}
+
+.og-details p {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22px;
+	color: #999;
+}
+
+.og-details a {
+	font-weight: 700;
+	font-size: 16px;
+	color: #333;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding: 10px 20px;
+	border: 3px solid #D35400;
+	display: inline-block;
+	margin: 30px 0 0;
+	outline: none;
+	text-decoration:none;
+}
+
+.og-details a::before {
+	
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.og-details a:hover {
+	border-color: #333;
+	color: #999;
+}
+
+.og-loading {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #ddd;
+	box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ccc;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -25px 0 0 -25px;
+	-webkit-animation: loader 0.5s infinite ease-in-out both;
+	-moz-animation: loader 0.5s infinite ease-in-out both;
+	animation: loader 0.5s infinite ease-in-out both;
+}
+
+@-webkit-keyframes loader {
+	0% { background: #ddd; }
+	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+}
+
+@-moz-keyframes loader {
+	0% { background: #ddd; }
+	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+}
+
+@keyframes loader {
+	0% { background: #ddd; }
+	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+}
+
+@media screen and (max-width: 830px) {
+
+	.og-expander h3 { font-size: 26px; }
+	.og-expander p { font-size: 13px; }
+	.og-expander a { font-size: 12px; }
+
+}
+
+@media screen and (max-width: 650px) {
+
+	.og-fullimg { display: none; }
+	.og-details { float: none; width: 100%; }
+	
+}
