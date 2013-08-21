@@ -86,17 +86,17 @@ var noogajs = angular.module("noogajs", []).config(function($routeProvider) {
 // CONTROLLERS
 
 noogajs.controller('HomeController', function() {
-	console.log('HomeController Fired');
+	//console.log('HomeController Fired');
 
 });
 noogajs.controller('AboutController', function() {
-	console.log('AboutController Fired');
+	//console.log('AboutController Fired');
 });
 noogajs.controller('LearnController', function() {
-	console.log('LearnController Fired');
+	//console.log('LearnController Fired');
 });
 noogajs.controller('MeetupController', function() {
-	console.log('MeetupController Fired');
+	//console.log('MeetupController Fired');
 });
 /*noogajs.controller('ChatController', function() {
 	console.log('ChatController Fired');
