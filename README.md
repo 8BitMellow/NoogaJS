@@ -19,7 +19,7 @@ Stay tuned... as there is more to come!
 
 Cheers,
 <h3>Brian &amp; Andrew</h3>
-<h4>(NoogaJS Co-Founders</h4>) 
+<h4>(The Starters)</h4>
 
 <h3>The <b>WHY</b></h3>
 At <a href="http://8-bit.me" target="_blank">8-Bit Mellow</a> we believe that we all...
