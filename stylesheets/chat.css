@@ -1,0 +1,28 @@
+/* Global */
+
+
+/* Chat */
+#messagesDiv {
+  background-color: white;
+  overflow: auto;
+  height: 350px;
+  width: 100%;
+  padding: 10px;
+  border: 8px solid #424547;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+#nameInput {
+  width: 26%;
+}
+
+#messageInput {
+  /*width: 68%;*/
+  width: 100%;
+}
+
+
+
+
+

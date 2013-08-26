@@ -1,0 +1,67 @@
+<section id="contact" class="contact-bg-color">
+  <section class="container-fluid inner mob-bg-remove">
+    <div class="row-fluid">
+        <section class="container">
+            <div class="row  add-top-more">
+            <article class="offset1 span8 well-small">
+                    <br/><br/>
+                    
+                         <div class="shoutout">
+                            <h3>STAY CONNECTED</h3>
+                            <h4><u>YOU</u> are invited to Join Us</h4>
+                           <p>Based in Chattanooga, Tennessee we are an open source community focused on serving <a href="http://thegigcity.com" target="_blank">The Gig City</a> pioneers who are working, playing, and blazing trails in the future landscape.</p><br>  
+                        
+                        <a class="btn btn-inverse" href="http://twitter.com/noogaJS" target="_blank">
+                        <img class="navicon" src="images/social/light/twitter.png"> &nbsp; Follow Us</a>&nbsp;&nbsp;
+                        <a class="btn btn-inverse" href="http://facebook.com/noogaJS" target="_blank">
+                        <img class="navicon" src="images/social/light/facebook.png"> &nbsp; Like Us</a>&nbsp;&nbsp;
+                        <a class="btn btn-inverse" href="#/join" >
+                        <img class="navicon" src="images/nav/about.png"> &nbsp; Join Us</a>
+
+                        </div>
+                </article>
+            </div>
+          <!--<div class="row">
+                    <article class="span12 text-center">
+                        <div id="fname"  class="alert alert-error error add-top">
+                        Name must not be empty
+                        </div>
+                        <div id="fmail" class="alert alert-error  error add-top">
+                        Please provide a valid Email
+                        </div>
+                        <div id="fmsg" class="alert alert-error  error add-top">
+                        Message should not be empty
+                        </div>
+                        <div class="alert-success success">
+                            Message sent successfully!
+                        </div>
+                        <div class="alert-failure failure">
+                            Oops! Something went wrong try again!
+                        </div>
+
+                    </article>
+                </div>-->
+
+            <div class="row  add-top-more">
+                <h2>{&quot;Contact&quot;: &quot;noogaJS&quot;}</h2><br/>
+              <form name="myform" id="contactForm" action="sendcontact.php" enctype="multipart/form-data" method="post">  
+                    <article class="span6">
+                        <textarea  id="msg" rows="3" cols="40" name="message" placeholder="Message" required></textarea>
+                    </article>
+
+                    <article class="span6">
+                        <input size="100" type="text" name="name" id="name" placeholder="Name" required>
+                        <input type="email"  size="30" id="email" name="email" placeholder="Email" required>
+
+                        <input type="hidden" value="spam@designova.net" name="receiver"/>
+                        <input type="hidden" id="subject" name="subject" value="Contact Us NoogaJS Website "/>
+
+                        <button type="submit" name="submit" id="submit" class="btn btn-renova add-top-half">Send Message</button>
+                    </article>
+                        
+                    </form>
+            </div>
+        </section>    
+    </div>   
+  </section>
+</section>

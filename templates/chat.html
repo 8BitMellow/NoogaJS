@@ -1,25 +1,35 @@
 <section id="chat" class="bg-dark master-section">
 
-	<section class="container-fluid inner mob-bg-remove">
+	<section class="container-fluid inner mob-bg-remove" ng-controller="ChatController">
     <div class="row-fluid">
         <section class="container">
             <div class="row add-top-main">
-                <article class="span12 center">
+                <article class="offset2 span8 center">
                 	<!--<div class="thumb-icon"><img alt="renova" title="renova" src="images/icons/chat-in.png"/></div>-->
-                	<h1 class="main-heading"><span>Chat</span></h1>
-                	<h3 class="promo-text-alt darken"><span>Old School Chatroom...</span></h3>
+                	<!--<h1 class="main-heading"><span>Chat</span></h1><br/>-->
+                	<h3 class="promo-text-inv-yellow darken"><span>Old School Chatroom!</span></h3>
                 </article>
-            </div>
+                <article class="offset2 span8 center">
+                  <h4>Chat in &lt; 30 lines of code?  Ask us how!</h4>
+                  <h4>Demo open to first 50 users</h4>
+                  <div class="well" style="overflow: scroll; max-height: 300px;">
+                  <div id='messages' ng-cloak ng-repeat="message in messages">
+    <div class="row">
+      <br/>
+      <div class="span1">
+        <img style="height: 36px; width: 36px" src='{{message.profile}}'>
+        </div>
+        <div class="span9"> 
+          &nbsp;<em><a href='http://twitter.com/{{message.from}}' target='_blank'>&#64;{{message.from}}</a>: </em>{{message.content}}<br/></div></div>
+  </div><br/>
 
-            <div class="row add-top add-bottom-services">
-                       <article class="offset2 span8 bg-white team-block">
-                    <div class="team-block-inner text-center">
-                        
-                    <h2 class="col-blue text-center">Work Underway!</h2>
-                    <h4 class="text-center"><span>Stay Tuned... </span></h4>
-                    <br>               
-
-                </article>      
+</div>
+</article>
+<article class="offset2 span8 center">
+  <form class="form-inline" ng-submit="addMessage()">
+    <input type="text" ng-model="message" placeholder="Message...">
+  </form>
+  </article>     
 </div>
         
         </section><!--/ container-->        

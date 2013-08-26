@@ -1,9 +1,9 @@
 <?php
 
 // Define some constants
-define( "RECIPIENT_NAME", "John Doe" ); //UPDATE THIS TO YOUR NAME
-define( "RECIPIENT_EMAIL", "john@example.com" ); //UPDATE THIS TO YOUR EMAIL ID
-define( "EMAIL_SUBJECT", "Website Visitor Message" ); //UPDATE THIS TO YOUR SUBJECT
+define( "RECIPIENT_NAME", "noogaJS" ); //UPDATE THIS TO YOUR NAME
+define( "RECIPIENT_EMAIL", "chatt@noogajs.org" ); //UPDATE THIS TO YOUR EMAIL ID
+define( "EMAIL_SUBJECT", "noogaJS.org Contact Us" ); //UPDATE THIS TO YOUR SUBJECT
 
 // Read the form values
 $success = false;
@@ -25,7 +25,7 @@ if ( $success )
 {
 ?>
 	<script>
-		window.location='thanks.html';
+		window.location='http://noogajs.dev/#/thanks';
 	</script>
 <?php
 }

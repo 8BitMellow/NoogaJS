@@ -22,6 +22,8 @@
 <link href="stylesheets/timeline.css" rel="stylesheet" />
 <link href="stylesheets/jquery.tweet.css" rel="stylesheet"/>
 <link href="stylesheets/responsive-nav.css" rel="stylesheet">
+<link href="stylesheets/firechat-default.css" rel="stylesheet" >
+<link href="stylesheets/chat.css" rel="stylesheet">
 <link href="stylesheets/style.css" rel="stylesheet">
 
 <script src="javascripts/modernizr.custom.js"></script>
@@ -84,16 +86,22 @@
 
        <!-- <li><a href="#/tweets"><img class="navicon" src="images/nav/tweets.png"></a></li>   -->
         <li><a href="#/chat"><img class="navicon" src="images/nav/chat.png"></a></li>
-        <li><a href="http://twitter.com/noogajs" target="_blank"><img class="navicon" src="images/nav/tweets.png"></a></li>         
+        <li><a href="#/contact"><img class="navicon" src="images/nav/contact.png"></a></li>         
         <!--<li><a href="#/tweets"><img class="navicon" src="img/nav/tweets.png"></a></li>-->
 
 
     </ul>
+    <div id="loginDiv">
+    <!--<a href="#loginModal" id="login" role="button" class="btn btn-renova" data-toggle="modal">Login</a>-->
+    <a href="#" id="login" class="btn btn-inverse" onclick="onLoginButtonClicked()"><img class="navicon" src="images/nav/tweets.png"> &nbsp; LOGIN</a>
+</div>
 </div>
 </nav>
 </header>
 <!-- Mobile Only Navigation - 2 types each for (480px to 640px) and (640px to 960px) wide device screens -->
 <header id="mobile-header" class="clearfix hidden-desktop">
+    <div class="navbar-inner">
+    <h3 class="italic pad20">noogaJS</h3>
     <div id="nav">
       <ul>
         <!--<li><a class="scroll-link" href="#showcase" data-soffset="0">Showcase</a></li>-->
@@ -107,6 +115,7 @@
         <li><a class="scroll-link" href="http://twitter.com/noogajs" target="_blank" data-soffset="0">Twitter</a></li>
       </ul>
     </div>
+</div>
 </header>
 
 
@@ -135,19 +144,30 @@
 
 <!--main-wrapper:ends-->
 
+<!-- LOGIN MODAL -->
+<div id="loginModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">noogaJS Login</h3>
+  </div>
+  <div class="modal-body">
+    <a href="#" class="btn btn-inverse" onclick="onLoginButtonClicked()"><img src="images/social/cool/twitter.png"> &nbsp;Login with Twitter</a>
+  </div>
+  <div class="modal-footer">
+
+  </div>
+</div>
 
 <!-- Le javascript
     ================================================== --> 
-<!-- Placed at the end of the document so the pages load faster --> 
-
-<script src="javascripts/jquery.js" type="text/javascript"></script>
-<!--<script src="javascripts/angular.min.js" type="text/javascript"></script>
-
-
+<!-- Placed at the end of the document so the pages load faster -->  
 <script src="https://cdn.firebase.com/v0/firebase.js"></script>
-<script src="https://cdn.firebase.com/v0/firebase-simple-login.js"></script><!-- FIREBASE SIMPLE LOGIN -->  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.min.js"></script>
-
+<script src="javascripts/jquery.min.js"></script>
+<script src="javascripts/underscore.min.js"></script>
+<script src="javascripts/angular.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angularFire/0.2.0/angularfire.min.js"></script>
+<script src="javascripts/firechat-default.min.js"></script>
+<script src="https://cdn.firebase.com/v0/firebase-simple-login.js"></script>
 
 <script src="assets/js/bootstrap-transition.js" type="text/javascript"></script> 
 <script src="assets/js/bootstrap-alert.js" type="text/javascript"></script> 
@@ -204,7 +224,8 @@
             fade: 3000,
             duration: 4000
         });
-    </script>   
+    </script> 
+ 
 
 </body>
 </html>

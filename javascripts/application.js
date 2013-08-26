@@ -1,4 +1,26 @@
-var noogajs = angular.module("noogajs", []).config(function($routeProvider) {
+// Create Base noogaJS Firebase Reference
+var noogajsRef = new Firebase('https://noogajsorg.firebaseio.com/');
+
+// Create Chat noogaJS Firebase Reference
+var noogajsChatRef = new Firebase('https://noogajsorg.firebaseio.com/chat');
+
+// Create user object reference 
+var noogan = null;
+
+var auth = new FirebaseSimpleLogin(noogajsRef, function(error, user) {
+	if (user) {
+        noogan = user;
+        $('#loginDiv').html("Logged in as <br/><a target='_blank' href='http://twitter.com/" + noogan.username + "'>" + noogan.username + "</a> &nbsp;&nbsp<img style='height=24px; width:24px;' src='" + noogan.profile_image_url + "'>");
+	}
+});
+
+// Login Function Using Simple Login for Twitter
+function onLoginButtonClicked() {  
+    auth.login('twitter');
+};
+
+
+var noogajs = angular.module('noogajs', [ 'firebase' ]).config(function($routeProvider) {
 	$routeProvider.when('/', {
 		templateUrl: 'templates/home.html',
 		controller: 'HomeController'
@@ -43,13 +65,33 @@ var noogajs = angular.module("noogajs", []).config(function($routeProvider) {
 		templateUrl: 'templates/meetup.html',
 		controller: 'MeetupController'
 	});
-	$routeProvider.when('/meetups/sep2013', {
-		templateUrl: 'templates/meetups/sep2013.html',
+	$routeProvider.when('/meetups/sep', {
+		templateUrl: 'templates/meetups/sep.html',
+		controller: 'MeetupController'
+	});
+	$routeProvider.when('/meetups/oct', {
+		templateUrl: 'templates/meetups/oct.html',
+		controller: 'MeetupController'
+	});
+	$routeProvider.when('/meetups/nov', {
+		templateUrl: 'templates/meetups/nov.html',
+		controller: 'MeetupController'
+	});
+	$routeProvider.when('/meetups/dec', {
+		templateUrl: 'templates/meetups/dec.html',
 		controller: 'MeetupController'
 	});
 	$routeProvider.when('/chat', {
 		templateUrl: 'templates/chat.html',
-		controller: 'MeetupController'
+		controller: 'ChatController'
+	});
+	$routeProvider.when('/contact', {
+		templateUrl: 'templates/contact.html',
+		controller: 'ContactController'
+	});
+	$routeProvider.when('/thanks', {
+		templateUrl: 'templates/thanks.html',
+		controller: 'ThanksController'
 	});
 	/*
 	$routeProvider.when('/login', {
@@ -97,6 +139,27 @@ noogajs.controller('LearnController', function() {
 });
 noogajs.controller('MeetupController', function() {
 	//console.log('MeetupController Fired');
+});
+
+noogajs.controller('ChatController', ['$scope', 'angularFire', function($scope, angularFire) {
+      angularFire(noogajsChatRef.limit(10), $scope, "messages", {});
+      $scope.username = noogan.username;
+      $scope.thumb = noogan.profile_image_url;
+      $scope.addMessage = function() {
+        $scope.messages[noogajsChatRef.push().name()] = {
+          profile: $scope.thumb, 
+          from: $scope.username, 
+          content: $scope.message
+        };
+        //$('#messages').animate({"scrollTop": $('#messages')[0].scrollHeight}, "fast");
+      $scope.message = "";
+}}]);
+
+noogajs.controller('ContactController', function() {
+	//console.log('ContactController Fired');
+});
+noogajs.controller('ThanksController', function() {
+	//console.log('ContactController Fired');
 });
 /*noogajs.controller('ChatController', function() {
 	console.log('ChatController Fired');

@@ -114,7 +114,7 @@
     },
 
     _renderLayout: function() {
-      var template = FirechatDefaultTemplates["templates/layout-full.html"];
+      var template = FirechatDefaultTemplates["templates/chat/layout-full.html"];
       $(this._el).html(template({
         maxLengthUsername: this.maxLengthUsername
       }));
@@ -161,7 +161,7 @@
     // Events related to chat invitations.
     _onChatInvite: function(invitation) {
       var self = this;
-      var template = FirechatDefaultTemplates["templates/prompt-invitation.html"];
+      var template = FirechatDefaultTemplates["templates/chat/prompt-invitation.html"];
       var $prompt = this.prompt('Invite', template(invitation));
       $prompt.find('a.close').click(function() {
         $prompt.remove();
@@ -182,7 +182,7 @@
       if (!invitation.status) return;
 
       var self = this,
-          template = FirechatDefaultTemplates["templates/prompt-invite-reply.html"],
+          template = FirechatDefaultTemplates["templates/chat/prompt-invite-reply.html"],
           $prompt;
 
       if (invitation.status && invitation.status === 'accepted') {
@@ -278,7 +278,7 @@
         showMessageContextMenu = function(event) {
           var $this = $(this),
               $message = $this.closest('[data-message-id]'),
-              template = FirechatDefaultTemplates["templates/message-context-menu.html"],
+              template = FirechatDefaultTemplates["templates/chat/message-context-menu.html"],
               messageVars = parseMessageVars.call(this, event),
               $template;
 
@@ -381,7 +381,7 @@
       }
 
       var $this = $(this),
-          template = FirechatDefaultTemplates["templates/room-list-item.html"],
+          template = FirechatDefaultTemplates["templates/chat/room-list-item.html"],
           selectRoomListItem = function() {
             var parent = $(this).parent(),
                 roomId = parent.data('room-id'),
@@ -420,7 +420,7 @@
 
       var $this = $(this),
           roomId = $this.closest('[data-room-id]').data('room-id'),
-          template = FirechatDefaultTemplates["templates/room-user-list-item.html"],
+          template = FirechatDefaultTemplates["templates/chat/room-user-list-item.html"],
           targetId = $this.data('target'),
           $target = $('#' + targetId);
 
@@ -537,7 +537,7 @@
           userId = $this.closest('[data-user-id]').data('user-id'),
           userName = $this.closest('[data-user-name]').data('user-name'),
           isMuted = $this.hasClass('red'),
-          template = FirechatDefaultTemplates["templates/prompt-user-mute.html"];
+          template = FirechatDefaultTemplates["templates/chat/prompt-user-mute.html"];
 
       event.preventDefault();
 
@@ -576,7 +576,7 @@
               userId = $this.closest('[data-user-id]').data('user-id'),
               roomId = $this.closest('[data-room-id]').data('room-id'),
               userName = $this.closest('[data-user-name]').data('user-name'),
-              template = FirechatDefaultTemplates["templates/prompt-invite-private.html"],
+              template = FirechatDefaultTemplates["templates/chat/prompt-invite-private.html"],
               $prompt;
 
           self._chat.getRoom(roomId, function(room) {
@@ -603,7 +603,7 @@
           var $this = $(this),
               userId = $this.closest('[data-user-id]').data('user-id'),
               userName = $this.closest('[data-user-name]').data('user-name'),
-              template = FirechatDefaultTemplates["templates/prompt-invite-private.html"],
+              template = FirechatDefaultTemplates["templates/chat/prompt-invite-private.html"],
               $prompt;
 
           if (userId && userName) {
@@ -816,7 +816,7 @@
    * @param    {string}    message
    */
   FirechatUI.prototype.renderAlertPrompt = function(title, message) {
-    var template = FirechatDefaultTemplates["templates/prompt-alert.html"],
+    var template = FirechatDefaultTemplates["templates/chat/prompt-alert.html"],
         $prompt = this.prompt(title, template({ message: message }));
 
       $prompt.find('.close').click(function() {
@@ -862,7 +862,7 @@
     };
 
     // Populate and render the tab content template.
-    var tabTemplate = FirechatDefaultTemplates["templates/tab-content.html"];
+    var tabTemplate = FirechatDefaultTemplates["templates/chat/tab-content.html"];
     var $tabContent = $(tabTemplate(room));
     this.$tabContent.prepend($tabContent);
     var $messages = $('#firechat-messages' + roomId);
@@ -882,7 +882,7 @@
     });
 
     // Populate and render the tab menu template.
-    var tabListTemplate = FirechatDefaultTemplates["templates/tab-menu-item.html"];
+    var tabListTemplate = FirechatDefaultTemplates["templates/chat/tab-menu-item.html"];
     var $tab = $(tabListTemplate(room));
     this.$tabList.prepend($tab);
 
@@ -983,7 +983,7 @@
     message.message = self.trimWithEllipsis(message.message, self.maxLengthMessage);
 
     // Populate and render the message template.
-    var template = FirechatDefaultTemplates["templates/message.html"];
+    var template = FirechatDefaultTemplates["templates/chat/message.html"];
     var $message = $(template(message));
     var $messages = self.$messages[roomId];
     if ($messages) {
@@ -1064,7 +1064,7 @@
    */
   FirechatUI.prototype.promptCreateRoom = function() {
     var self = this;
-    var template = FirechatDefaultTemplates["templates/prompt-create-room.html"];
+    var template = FirechatDefaultTemplates["templates/chat/prompt-create-room.html"];
 
     var $prompt = this.prompt('Create Public Room', template({
       maxLengthRoomName: this.maxLengthRoomName,
@@ -1102,7 +1102,7 @@
    * @param    {string}    content
    */
   FirechatUI.prototype.prompt = function(title, content) {
-    var template = FirechatDefaultTemplates["templates/prompt.html"],
+    var template = FirechatDefaultTemplates["templates/chat/prompt.html"],
         $prompt;
 
     $prompt = $(template({

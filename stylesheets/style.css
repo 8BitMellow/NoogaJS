@@ -349,7 +349,7 @@ padding-bottom: 10px;
 	background: #fff;
 }
 #about .inner{
-	background: url('../images/badges/01.png') no-repeat right top;
+	background: url('../images/badges/about.png') no-repeat right top;
 }
 
 
@@ -407,14 +407,14 @@ padding-bottom: 10px;
 }
 
 #meetup .inner{
-	background: url('../images/badges/05.png')  no-repeat right top;
+	background: url('../images/badges/meetup.png')  no-repeat right top;
 }
 
 #meetup-detail{
 	background: #FFC000 url('../images/slants/white.png') center top no-repeat;
 }
 #meetup-detail .inner{
-	background: url('../images/badges/05.png') no-repeat right top;
+	background: url('../images/badges/meetup.png') no-repeat right top;
 }
 
 #chat {
@@ -445,7 +445,7 @@ padding-bottom: 10px;
     padding-bottom: 0 !important;
 }
 #contact .inner{
-	background: url('../images/badges/05.png')  no-repeat right top;
+	background: url('../images/badges/contact.png')  no-repeat right top;
 }
 
 
