@@ -25,7 +25,7 @@ if ( $success )
 {
 ?>
 	<script>
-		window.location='http://noogajs.dev/#/thanks';
+		window.location='http://noogajs.org/#/thanks';
 	</script>
 <?php
 }
